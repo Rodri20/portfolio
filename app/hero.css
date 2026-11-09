@@ -21,3 +21,8 @@
 @media(max-width:700px){.portrait-scene{height:420px;max-width:420px;width:100%;margin:0 auto}.portrait-disc{width:88%;bottom:20px}.portrait-spark{top:35px;right:8px}.portrait-name{left:3%;bottom:25px}.portrait-caption{font-size:6px}.portrait-ring{width:96%}}
 @media(max-width:380px){.portrait-scene{height:360px}.portrait-name{padding:11px;font-size:12px}.portrait-spark{font-size:40px}}
 @media(prefers-reduced-motion:reduce){.portrait-float{animation:none}}
+
+/* Keep the chosen three-line headline balanced at every viewport. */
+.hero-v2 h1{font-size:clamp(38px,4.4vw,63px);letter-spacing:-2.8px;line-height:1.13}
+@media(max-width:1000px) and (min-width:701px){.hero-v2 h1{font-size:clamp(30px,4.2vw,44px);letter-spacing:-1.8px}}
+@media(max-width:700px){.hero-v2 h1{font-size:clamp(28px,7.8vw,52px);letter-spacing:-1.5px;line-height:1.15}}
