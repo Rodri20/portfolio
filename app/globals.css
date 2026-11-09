@@ -6,3 +6,5 @@
 
 /* Joined RM adapted from the supplied personal brand reference. */
 .brand-mark{width:108px}footer .brand-mark{width:86px}.brand:hover .brand-mark{transform:translateY(-2px)}@media(max-width:700px){.brand-mark{width:86px}footer .brand-mark{width:76px}}@media(prefers-reduced-motion:reduce){.brand:hover .brand-mark{transform:none}}
+
+
