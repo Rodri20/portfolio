@@ -4,3 +4,20 @@
 .hero-highlight svg path{stroke-dasharray:1;stroke-dashoffset:1;animation:hero-underline-loop 3.6s cubic-bezier(.65,0,.35,1) infinite}
 @keyframes hero-underline-loop{0%,8%{stroke-dashoffset:1;opacity:1}42%,68%{stroke-dashoffset:0;opacity:1}90%,100%{stroke-dashoffset:-1;opacity:1}}
 @media(prefers-reduced-motion:reduce){.hero-highlight svg path{animation:none;stroke-dashoffset:0}}
+
+/* Open portrait composition. */
+.portrait-scene{position:relative;isolation:isolate;height:500px;display:flex;align-items:end;justify-content:center}
+.portrait-disc{position:absolute;width:88%;aspect-ratio:1;bottom:24px;border-radius:50%;background:linear-gradient(140deg,#e4f4af,#c5e76e);z-index:-2}
+.portrait-disc:after{content:'';position:absolute;inset:18px;border:1px solid #f8f8f270;border-radius:50%}
+.portrait-ring{position:absolute;width:98%;aspect-ratio:1;border:1px solid #b4c49170;border-radius:50%;bottom:0;transform:rotate(-23deg) scaleX(.94);z-index:-1}
+.portrait-float{width:100%;height:100%;display:flex;align-items:end;justify-content:center;animation:portrait-float 6s ease-in-out infinite}
+.portrait-image{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 14px 14px #25301f13);mask-image:linear-gradient(black 89%,transparent 100%)}
+.portrait-spark{position:absolute;right:5px;top:50px;font-size:62px;line-height:1;color:#748a46;transform:rotate(12deg);z-index:2}
+.portrait-caption{position:absolute;left:0;top:22%;writing-mode:vertical-rl;transform:rotate(180deg);font-size:7px;letter-spacing:2px;color:#7c876e}
+.portrait-name{position:absolute;left:4%;bottom:26px;display:flex;gap:12px;align-items:center;padding:16px 19px;background:#fafbf3eF;border:1px solid #e1e6d5;border-radius:12px;box-shadow:0 10px 35px #25301b0c;z-index:2;font-size:15px;backdrop-filter:blur(10px)}
+.portrait-name .dot{background:#8ca849;box-shadow:0 0 0 4px #a9c66a20}.portrait-name small{display:block;margin-top:5px;font-size:6px;letter-spacing:1.2px;color:#7b856b}.portrait-name svg{margin-left:20px;color:#788a52}.portrait-index{position:absolute;bottom:6px;right:8%;font:8px monospace;color:#84916e;letter-spacing:1px}
+@keyframes portrait-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:1000px){.portrait-scene{height:440px}.portrait-spark{font-size:48px;right:0}.portrait-name{left:0;padding:13px;font-size:13px}.portrait-name svg{margin-left:5px}}
+@media(max-width:700px){.portrait-scene{height:420px;max-width:420px;width:100%;margin:0 auto}.portrait-disc{width:88%;bottom:20px}.portrait-spark{top:35px;right:8px}.portrait-name{left:3%;bottom:25px}.portrait-caption{font-size:6px}.portrait-ring{width:96%}}
+@media(max-width:380px){.portrait-scene{height:360px}.portrait-name{padding:11px;font-size:12px}.portrait-spark{font-size:40px}}
+@media(prefers-reduced-motion:reduce){.portrait-float{animation:none}}
